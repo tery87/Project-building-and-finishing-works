@@ -1,0 +1,108 @@
+.header
+    padding-left: 5.84vw
+    padding-right: 4vw 
+    grid-column: full-start / full-end
+    display: grid
+    grid-template-columns: repeat(20, 1fr)
+    grid-template-rows: 22% 15% 35% 28%
+    background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/footer-background.png) center / cover no-repeat
+    &__btn
+        grid-row: 4 / -1
+        grid-column: 1 / 18
+        margin-top: 0.5rem 
+        width: 31rem
+        height: 4.7rem
+.logo
+    &__big
+        padding-top: 3.6vh
+        grid-row: 1 / 2
+        grid-column: 1 / 2
+        display: block
+        translate: 0 2vw
+        
+.title
+    grid-row: 3 / 4
+    grid-column: 1 / 10
+    margin-top: 1rem
+
+.nav
+    padding-top: 6.3rem
+    grid-row: 1 / 2
+    grid-column: 2 / 20
+    translate: -13.8% 0
+    &__list
+        list-style: none
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)) 
+        justify-items: center
+        gap: 0
+    &__link
+        &:link, &:visited
+            font-size: 2rem
+            font-weight: 400
+            color: $color-white
+            text-decoration: none
+            text-align: center
+            transition: all .2s
+            display: inline-block
+        &:hover, &:active
+            color: $color-gold
+            transform: translateY(-.3rem) 
+
+.contacts
+    grid-row: 2/3
+    grid-column: 16/21
+    display: grid
+    grid-template-rows: repeat(auto-fit, 1fr)
+    font-family: AdobeClean
+    justify-items: end
+    font-size: 2.8rem
+    font-weight: 700
+    line-height: 3.4rem
+    color: $color-white
+    width: 28rem
+    gap: .8rem
+    &_footer
+        margin-left: 8rem 
+        grid-column: 3/-1
+        grid-row: 1/-1
+        display: grid
+        grid-template-rows: 4rem 4rem
+        align-content: center
+
+
+    &__phone
+        width: 80%
+        padding: 1.5% 8%
+        text-align: right
+        background: $color-white
+        border-radius: 2rem
+    &__link
+        &:link, &:visited
+            display: inline-block
+            text-decoration: none
+            color: $color-gold
+    &__link_email
+        &:link, &:visited
+            display: inline-block
+            text-decoration: none
+            color: $color-white
+
+.boss
+    grid-row: 4/-1
+    grid-column: 12/21
+    font-family:  David, system-ui, -apple-system, sans-serif
+    font-size: 4rem
+    font-weight: 600
+    line-height: 4.8rem
+    padding-top: 6rem
+    padding-left: 0rem
+    text-align: center
+    &__name
+        color: $color-gold
+        text-shadow: 0px 1px 1px $color-white
+    &__job-title
+        font-size: 3.2rem
+        font-weight: 400
+        line-height: 3.84rem
+        color: $color-white

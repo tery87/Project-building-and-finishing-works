@@ -1,0 +1,47 @@
+$color-white: rgba(255, 253, 253, 1)
+$color-almost-white: rgba(245, 245, 245, 1)
+$color-gold: rgba(214, 166, 43, 1)
+$color-grey: rgba(102, 102, 102, 1)
+
+$box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+    
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    scroll-behavior: smooth
+
+@font-face 
+    font-family: "David"
+    src: url('/fonts/david.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-family: "SourceSansPro"
+    src: url('/fonts/SourceSansPro-Regular.ttf')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-family: "AdobeClean"
+    src: url('/fonts/AdobeCleanUXRegular.otf')
+    font-weight: normal
+    font-style: normal
+
+body
+    font-family: SourceSansPro
+    font-weight: 400
+    color: $color-grey
+    line-height: 113%
+    font-size: 1.6rem
+    background-color: $color-white
+
+.container
+    display: grid
+    grid-template-rows: 64.5vh 52vh 130vh 114vh 83vh 15vh
+    grid-template-columns: [full-start] minmax(7rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(7rem, 1fr) [full-end]
+    // width: 1440px

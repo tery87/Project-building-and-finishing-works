@@ -1,0 +1,33 @@
+.advantages
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 1.8%
+    background-color: $color-white
+    grid-column: center-start / center-end
+    padding: 7.5% 2% 8% 2%
+
+
+.advantages-card
+    background-color: $color-almost-white
+    display: grid
+    text-align: center
+    padding: 5rem 2.7rem 2.7rem 2.7rem
+    box-shadow: 0px 4px 4px 0px rgba(102, 102, 102, 0.3)
+    transition: .2s all
+    grid-template-rows: 0.55fr 0.2fr 0.25fr
+    &:hover
+        transform: translateY(-1.5rem) scale(1.03)
+    &__icon-div
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        &_container
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 11rem
+            height: 11rem
+            background-color: rgba(241, 241, 241, 1)
+            border-radius: 50%
+        &_icon
+            width: 68% 

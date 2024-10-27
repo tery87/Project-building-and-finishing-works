@@ -1,0 +1,25 @@
+.footer
+    background-color: $color-grey
+    grid-column: full-start / full-end
+    display: grid
+    grid-template-columns: 0.33fr 0.34fr 0.33fr
+    &__icons
+        grid-column: 2/3
+        align-content: center
+        justify-content: center
+
+.icon-list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    align-content: center
+    justify-items: center
+
+
+
+.logo__small
+    grid-column: 1/2
+    margin-left: 7vw
+    align-content: center
+    & img
+        width: 17rem
+

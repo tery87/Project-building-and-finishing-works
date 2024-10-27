@@ -1,10 +1,19 @@
 .btn
-    font-size: 1.6rem
-    font-weight: 700
-    text-transform: uppercase
-    color: $color-grey-light
-    background-color: $color-green-light
+    font-size: 2rem
+    line-height: 2rem
+    font-weight: 400
+    font-family: "SourceSansPro"
+    color: $color-white
+    background-color: $color-gold
     border: 0
-    padding: 1.5rem 3rem
+    padding: 1.4rem 5.6rem
+    border-radius: 2rem
+    box-shadow: $box-shadow
+    cursor: pointer
+    transition: all .2s
     &:hover
-        background-color: $color-green-dark
+        color: $color-gold
+        background-color: $color-white
+        transform: scale(.95)
+    &:active
+        transform: translateY(-0.2rem)

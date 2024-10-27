@@ -1,0 +1,38 @@
+.services
+    grid-column: full-start / full-end
+    display: grid
+    grid-template-columns: 50% 50%
+    grid-template-rows: 13% repeat(3, minmax(10rem, 1fr))
+    background: linear-gradient(180deg, rgba(204, 204, 204, 0.32) 4.77%, rgba(153, 152, 152, 0.4) 100%), url(../img/services-background.png) center / cover no-repeat
+    padding: 6vw
+    padding-right: 9vw
+    gap: 1.2rem 4rem
+
+.div-title
+    grid-row: 1 / 2
+    grid-column: 1 / -1
+
+
+.services-card
+    padding: 6rem 6rem
+    transition: .2s all
+    background: linear-gradient(180deg, rgba(255, 253, 253, 0.7) 1.77%, rgba(204, 204, 204, 0.7) 67.27%, rgba(245, 245, 245, 0.7) 97.27%)
+    border-radius: 1rem
+    &__content 
+        display: grid
+        grid-template-columns: 5rem 1fr
+        grid-template-rows: 5rem 1fr     
+    &__icon
+        transform: translateY(-0.8rem)
+        grid-row: 1 / 2
+        grid-column: 1 / 2
+    &__title
+        grid-row: 1 / 2
+        grid-column: 2 / -1
+        letter-spacing: 0.2rem
+    &__paragraph
+        grid-row: 2 / 3
+        grid-column: 1 / -1
+    &:hover
+        transform: translateY(-1rem) scale(0.98)
+
