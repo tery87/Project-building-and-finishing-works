@@ -3,7 +3,7 @@
     padding-right: 4vw 
     grid-column: full-start / full-end
     display: grid
-    grid-template-columns: repeat(20, 1fr)
+    grid-template-columns: repeat(10, 1fr)
     grid-template-rows: 22% 15% 35% 28%
     background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/footer-background.png) center / cover no-repeat
     &__btn
@@ -22,13 +22,13 @@
         
 .title
     grid-row: 3 / 4
-    grid-column: 1 / 10
+    grid-column: 1 / 7
     margin-top: 1rem
 
 .nav
     padding-top: 6.3rem
     grid-row: 1 / 2
-    grid-column: 2 / 20
+    grid-column: 2 / 10
     translate: -13.8% 0
     &__list
         list-style: none
@@ -51,8 +51,9 @@
 
 .contacts
     grid-row: 2/3
-    grid-column: 16/21
+    grid-column: 8/-1
     display: grid
+    padding-left: 5.5rem
     grid-template-rows: repeat(auto-fit, 1fr)
     font-family: AdobeClean
     justify-items: end
@@ -72,8 +73,8 @@
 
 
     &__phone
-        width: 80%
-        padding: 1.5% 8%
+        width: 22.4rem
+        padding: .4rem 2.24rem
         text-align: right
         background: $color-white
         border-radius: 2rem
@@ -90,13 +91,13 @@
 
 .boss
     grid-row: 4/-1
-    grid-column: 12/21
+    grid-column: 5/-1
     font-family:  David, system-ui, -apple-system, sans-serif
     font-size: 4rem
     font-weight: 600
     line-height: 4.8rem
     padding-top: 6rem
-    padding-left: 0rem
+    padding-left: 13rem
     text-align: center
     &__name
         color: $color-gold
