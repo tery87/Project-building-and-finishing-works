@@ -29,6 +29,11 @@ html {
     font-size: 20%;
   }
 }
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 18%;
+  }
+}
 
 @font-face {
   font-family: "David";
