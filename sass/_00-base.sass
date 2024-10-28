@@ -3,7 +3,28 @@ $color-almost-white: rgba(245, 245, 245, 1)
 $color-gold: rgba(214, 166, 43, 1)
 $color-grey: rgba(102, 102, 102, 1)
 
-$box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+$box-shadow: 0px .4rem .4rem 0px rgba(0, 0, 0, 0.25)
+
+@mixin respond($breakpoint)
+    @if $breakpoint == phone 
+        @media only screen and (max-width: 420px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 830px)
+            @content
+    
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1170px)
+            @content
+            
+    @if $breakpoint == normal-screen
+        @media only screen and (max-width: 1500px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 2000px)
+            @content
     
 *, ::after, ::before
     margin: 0
@@ -12,6 +33,12 @@ $box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
 
 html
     font-size: 62.5%
+    @include respond(big-screen)
+        font-size: 90%
+    @include respond(tab-land)
+        font-size: 50%
+    @include respond(phone)
+        font-size: 40%
     scroll-behavior: smooth
 
 @font-face 
@@ -42,6 +69,6 @@ body
 
 .container
     display: grid
-    grid-template-rows: 64.5vh 52vh 130vh 114vh 83vh 15vh
+    grid-template-rows: 74rem 59.4rem 148.4rem 130rem 94.8rem 17.1rem
     grid-template-columns: [full-start] minmax(7rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(7rem, 1fr) [full-end]
     // width: 1440px

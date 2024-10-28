@@ -2,7 +2,7 @@
     background-color: $color-grey
     grid-column: full-start / full-end
     display: grid
-    grid-template-columns: 0.33fr 0.34fr 0.33fr
+    grid-template-columns: 33% 34% 33%
     &__icons
         grid-column: 2/3
         align-content: center
@@ -11,15 +11,28 @@
 .icon-list
     display: grid
     grid-template-columns: repeat(3, 1fr)
-    align-content: center
+    align-items: center
     justify-items: center
 
 
+.telegram-img
+    width: 2vw
+.vk-img
+    width: 3vw
+.whatsapp-img
+    width: 3vw
 
 .logo__small
     grid-column: 1/2
     margin-left: 7vw
     align-content: center
     & img
-        width: 17rem
+        width: 55%
 
+.contacts-footer
+    padding-left: 5vw
+    grid-column: 3/-1
+    grid-row: 1/-1
+    display: grid
+    grid-template-rows: 4rem 4rem
+    align-content: center
