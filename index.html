@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
+
     <title>NEW.строй</title>
     <meta
       name="description"
@@ -45,7 +46,106 @@
             в Челябинске
           </h1>
         </div>
-        <button class="btn header__btn">Узнать стоимость</button>
+        <button id="openFormBtn" class="btn header__btn">
+          Узнать стоимость
+        </button>
+        <!-- Фон всплывающей формы -->
+        <div class="modal" id="modal">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2></h2>
+            <form id="requestForm">
+              <!-- Первое поле: Площадь помещения в м2 -->
+              <input
+                type="number"
+                id="area"
+                name="area"
+                placeholder="Площадь помещения в м2"
+                required
+              />
+              <!-- Второе поле: Состояние помещения -->
+              <select
+                id="condition"
+                name="condition"
+                placeholder="Состояние помещения:"
+                required
+              >
+                <option value="" disabled selected>Выберите состояние</option>
+                <option value="вторичка со старым ремонтом">
+                  Вторичка со старым ремонтом
+                </option>
+                <option value="новостройка с черновой отделкой">
+                  Новостройка с черновой отделкой
+                </option>
+                <option value="новостройка с чистовой отделкой">
+                  Новостройка с чистовой отделкой
+                </option>
+                <option value="новостройка без отделки">
+                  Новостройка без отделки
+                </option>
+                <option value="коттедж">Коттедж</option>
+              </select>
+              <div class="form-group">
+                <label>Есть ли дизайн проект?</label>
+                <div class="toggle-buttons">
+                  <div class="toggle-button">
+                    <span>Да</span>
+                    <label class="switch">
+                      <input
+                        type="radio"
+                        name="designProject"
+                        value="Да"
+                        onclick="toggleDesignProject('yes')"
+                      />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="toggle-button">
+                    <span>Нет</span>
+                    <label class="switch">
+                      <input
+                        type="radio"
+                        name="designProject"
+                        value="Нет"
+                        onclick="toggleDesignProject('no')"
+                      />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="toggle-button">
+                    <span>Нужен</span>
+                    <label class="switch">
+                      <input
+                        type="radio"
+                        name="designProject"
+                        value="Нужно"
+                        onclick="toggleDesignProject('need')"
+                      />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Четвёртое поле: Номер телефона -->
+              <label for="phone"
+                >Оставьте свой номер телефона, мы обязательно Вам
+                перезвоним:</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+7___ ___ __ __"
+                value="+7"
+                required
+              />
+
+              <!-- Кнопка отправить -->
+              <button type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
         <div class="contacts">
           <div class="contacts__phone">
             <a
@@ -166,7 +266,6 @@
               Штукатурка, шпатлевка стен, монтаж настенных декоративных покрытий
               (окрашивание, обои, кафель, керамогранит, декоративная
               штукатурка), выравнивание пола, монтаж напольных покрытий
-              (ламинат, линолеум, паркет, пробка, кварц-винил, плитка)
             </p>
           </div>
         </div>
@@ -314,7 +413,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="telegram"
-                ><img src="icons/telegram.svg" alt="telegram" class="telegram-img"
+                ><img
+                  src="icons/telegram.svg"
+                  alt="telegram"
+                  class="telegram-img"
               /></a>
             </li>
             <li class="vk__item">
@@ -332,7 +434,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="whatsapp"
-                ><img src="icons/whatsapp.svg" alt="whatsapp" class="whatsapp-img"
+                ><img
+                  src="icons/whatsapp.svg"
+                  alt="whatsapp"
+                  class="whatsapp-img"
               /></a>
             </li>
           </ul>
@@ -359,5 +464,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/script.js "></script>
   </body>
 </html>
