@@ -68,79 +68,6 @@ body {
   grid-template-columns: [full-start] minmax(7rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(7rem, 1fr) [full-end];
 }
 
-/* Стиль для фона всплывающей формы */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  background-color: rgba(214, 166, 43, 0.8);
-  box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.25);
-  margin: 15% auto;
-  padding: 3rem;
-  width: 92.4rem;
-  height: 44.7rem;
-  border-radius: 1rem;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.close:hover, .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.toggle-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.toggle-button {
-  flex: 1;
-  margin: 0 5px;
-  padding: 10px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.toggle-button.active {
-  background-color: #0056b3;
-}
-
-button[type=submit] {
-  width: 100%;
-  padding: 10px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button[type=submit]:hover {
-  background-color: #218838;
-}
-
 .header {
   padding-left: 5.84vw;
   padding-right: 4vw;
@@ -148,7 +75,7 @@ button[type=submit]:hover {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 22% 15% 35% 28%;
-  background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background.png) center/cover no-repeat;
+  background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background.webp) center/cover no-repeat;
   background-position: right center;
   overflow: hidden;
 }
@@ -161,11 +88,10 @@ button[type=submit]:hover {
 }
 
 .logo__big {
-  padding-top: 3.6vh;
+  padding-top: 45%;
   grid-row: 1/2;
   grid-column: 1/2;
   display: block;
-  translate: 0 2vw;
   width: 100%;
 }
 .logo__img {
@@ -303,7 +229,7 @@ button[type=submit]:hover {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 13% repeat(3, minmax(10rem, 1fr));
-  background: linear-gradient(180deg, rgba(204, 204, 204, 0.32) 4.77%, rgba(153, 152, 152, 0.4) 100%), url(../img/services-background.png) center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(204, 204, 204, 0.32) 4.77%, rgba(153, 152, 152, 0.4) 100%), url(../img/services-background.webp) center/cover no-repeat;
   padding: 6vw;
   padding-right: 9vw;
   gap: 1.2rem 4rem;
@@ -412,7 +338,7 @@ button[type=submit]:hover {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 7% 62% 31%;
-  background: linear-gradient(180deg, rgba(102, 102, 102, 0.5) 16.27%, rgba(255, 253, 253, 0.5) 44.77%, rgba(102, 102, 102, 0.5) 75.27%), url(../img/reviews-background.png) center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(102, 102, 102, 0.5) 16.27%, rgba(255, 253, 253, 0.5) 44.77%, rgba(102, 102, 102, 0.5) 75.27%), url(../img/reviews-background.webp) center/cover no-repeat;
   padding: 7vw;
 }
 .reviews__div {
@@ -447,10 +373,6 @@ button[type=submit]:hover {
   margin-top: 3%;
   width: 31rem;
   height: 5rem;
-}
-.reviews__btn a:link, .reviews__btn a:visited {
-  text-decoration: none;
-  color: rgb(255, 253, 253);
 }
 
 .reviews-card {
@@ -561,6 +483,219 @@ button[type=submit]:hover {
   transform: translateY(-0.2rem);
 }
 
+/* Стиль для фона всплывающей формы */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  display: grid;
+  grid-template-rows: 5% 95%;
+  background-color: rgba(214, 166, 43, 0.8);
+  box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.25);
+  margin: 7% auto;
+  padding: 3rem;
+  width: 64vw;
+  height: 32vw;
+  border-radius: 1rem;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 1s ease;
+}
+
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.request-form {
+  grid-row: 2/-1;
+  display: grid;
+  grid-template-rows: repeat(5, minmax(1vw, 1fr));
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+}
+
+.close {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  color: rgb(245, 245, 245);
+  text-decoration: none;
+  font-size: 5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.close:hover, .close:focus {
+  transform: rotate(90deg) scale(1.2);
+}
+.close:active {
+  transform: scale(0.8);
+}
+
+.square-form {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.type-of-object-form {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.type-of-object-form:focus-visible {
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.form-input {
+  display: flex;
+  width: 64%;
+  height: 81%;
+  border: none;
+  padding-left: 2rem;
+  border-radius: 1rem;
+  -moz-appearance: textfield;
+}
+.form-input::-webkit-outer-spin-button, .form-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-input::-moz-placeholder {
+  text-align: left;
+  opacity: 1;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.form-input::placeholder {
+  text-align: left;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.form-input:focus-visible {
+  outline: none;
+}
+.form-input:focus-visible::-moz-placeholder {
+  opacity: 0;
+}
+.form-input:focus-visible::placeholder {
+  opacity: 0;
+}
+
+.form-group {
+  grid-row: 3/-1;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+.form-group label {
+  grid-row: 1/2;
+  margin-top: 0.5rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3.12rem;
+  color: rgb(255, 253, 253);
+}
+
+.toggle-buttons {
+  grid-row: 2/-1;
+  display: grid;
+  align-items: center;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  gap: 50% 20%;
+  width: 14%;
+  height: 10%;
+}
+
+.toggle-button {
+  width: 6.5rem;
+  height: 3.4rem;
+  padding: 0.3rem;
+  background-color: rgb(255, 253, 253);
+  border-radius: 2rem;
+}
+.toggle-button input[type=radio] {
+  display: none;
+}
+.toggle-button input[type=radio]:checked + .slider::before {
+  transform: translateX(3.1rem);
+}
+
+.button-1 {
+  grid-row: 1/2;
+}
+
+.button-2 {
+  grid-row: 2/3;
+}
+
+.button-3 {
+  grid-row: 3/4;
+}
+
+.slider {
+  background-color: #ffffff;
+  height: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: rgb(214, 166, 43);
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.phone-label {
+  margin-top: 2.8rem;
+  margin-left: 3rem;
+  grid-row: 2/4;
+  grid-column: 2/-1;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3.12rem;
+  color: rgb(255, 253, 253);
+}
+.phone-label__input {
+  grid-row: 3/5;
+  grid-column: 2/-1;
+  height: 40.5%;
+  margin-top: 2.8rem;
+  margin-left: 3rem;
+}
+
+.submit_btn {
+  grid-row: 5/-1;
+  grid-column: 2/3;
+  margin-top: 0.8rem;
+  margin-left: 15rem;
+  width: 55%;
+  height: 65%;
+  padding: 1rem;
+  background-color: rgb(245, 245, 245);
+  color: rgb(214, 166, 43);
+  cursor: pointer;
+}
+.submit_btn:active {
+  transform: translateY(-0.2rem);
+}
+
 .title-header {
   font-family: David, system-ui, -apple-system, sans-serif;
   font-size: 4.8rem;
@@ -632,6 +767,21 @@ button[type=submit]:hover {
   font-size: 2rem;
   font-weight: 400;
   color: rgb(102, 102, 102);
+}
+
+.placeholder-text {
+  font-family: Source Sans Pro;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.54rem;
+  color: rgba(43, 45, 51, 0.5);
+}
+
+.modal-label-text {
+  color: rgb(255, 253, 253);
+  font-size: 2rem;
+  line-height: 2.54rem;
+  font-weight: 400;
 }
 
 .mb-sm {

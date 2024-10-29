@@ -53,24 +53,26 @@
         <div class="modal" id="modal">
           <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
-            <h2></h2>
-            <form id="requestForm">
+            <form id="requestForm" class="request-form">
               <!-- Первое поле: Площадь помещения в м2 -->
               <input
                 type="number"
                 id="area"
+                class="square-form form-input placeholder-text"
                 name="area"
-                placeholder="Площадь помещения в м2"
+                placeholder="Площадь помещения"
+                min="0"
                 required
               />
               <!-- Второе поле: Состояние помещения -->
               <select
                 id="condition"
                 name="condition"
+                class="form-input type-of-object-form placeholder-text"
                 placeholder="Состояние помещения:"
                 required
               >
-                <option value="" disabled selected>Выберите состояние</option>
+                <option value="" disabled selected hidden>Состояние помещения:</option>
                 <option value="вторичка со старым ремонтом">
                   Вторичка со старым ремонтом
                 </option>
@@ -85,11 +87,12 @@
                 </option>
                 <option value="коттедж">Коттедж</option>
               </select>
+
+              <!-- Третье поле: Есть ли дизайн проект? -->
               <div class="form-group">
                 <label>Есть ли дизайн проект?</label>
                 <div class="toggle-buttons">
-                  <div class="toggle-button">
-                    <span>Да</span>
+                  <div class="toggle-button button-1">
                     <label class="switch">
                       <input
                         type="radio"
@@ -100,8 +103,8 @@
                       <span class="slider"></span>
                     </label>
                   </div>
-                  <div class="toggle-button">
-                    <span>Нет</span>
+                  <span class="modal-label-text">Да</span>
+                  <div class="toggle-button button-2">
                     <label class="switch">
                       <input
                         type="radio"
@@ -112,8 +115,8 @@
                       <span class="slider"></span>
                     </label>
                   </div>
-                  <div class="toggle-button">
-                    <span>Нужен</span>
+                  <span class="modal-label-text">Нет</span>
+                  <div class="toggle-button button-3">
                     <label class="switch">
                       <input
                         type="radio"
@@ -124,11 +127,12 @@
                       <span class="slider"></span>
                     </label>
                   </div>
+                  <span class="modal-label-text">Нужен</span>
                 </div>
               </div>
 
               <!-- Четвёртое поле: Номер телефона -->
-              <label for="phone"
+              <label for="phone" class="phone-label"
                 >Оставьте свой номер телефона, мы обязательно Вам
                 перезвоним:</label
               >
@@ -136,13 +140,14 @@
                 type="tel"
                 id="phone"
                 name="phone"
+                class="form-input placeholder-text phone-label__input"
                 placeholder="+7___ ___ __ __"
                 value="+7"
                 required
               />
 
               <!-- Кнопка отправить -->
-              <button type="submit">Отправить</button>
+              <button type="submit" class="btn submit_btn">Отправить</button>
             </form>
           </div>
         </div>
@@ -353,7 +358,7 @@
         <div class="reviews__div">
           <div class="reviews-card">
             <img
-              src="img/review_aleksandra.png"
+              src="img/review_aleksandra.webp"
               alt="review_aleksandra"
               class="reviews-card__img"
             />
@@ -368,7 +373,7 @@
           </div>
           <div class="reviews-card">
             <img
-              src="img/review_ivan.png"
+              src="img/review_ivan.webp"
               alt="review_ivan"
               class="reviews-card__img"
             />
@@ -380,7 +385,7 @@
           </div>
           <div class="reviews-card">
             <img
-              src="img/review_maria.png"
+              src="img/review_maria.webp"
               alt="review_maria"
               class="reviews-card__img"
             />
@@ -398,7 +403,13 @@
           >
             Еще больше наших работ можно посмотреть
           </p>
-          <button class="btn reviews__btn"><a href="#">Смотреть</a></button>
+          <button
+            class="btn reviews__btn"
+            onclick="window.open('https://vk.com/id881487030', '_blank')"
+            target="_blank"
+          >
+            Смотреть
+          </button>
         </div>
       </section>
       <footer class="footer" id="footer">
@@ -409,7 +420,7 @@
           <ul class="icon-list">
             <li class="telegram__item">
               <a
-                href="tg://resolve?domain=agvento-test"
+                href="https://t.me/newstroy74"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="telegram"

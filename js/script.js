@@ -6,19 +6,34 @@ const closeModal = document.getElementById("closeModal");
 // Открытие модального окна
 openFormBtn.onclick = function () {
   modal.style.display = "block";
+  setTimeout(() => modal.classList.add("show"), 10);
 };
 
 // Закрытие модального окна
 closeModal.onclick = function () {
-  modal.style.display = "none";
+  modal.classList.remove("show");
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 400);
+  clearForm(); // Закрытие после завершения анимации (400 мс)
 };
 
 // Закрытие модального окна при клике вне его
 window.onclick = function (event) {
   if (event.target === modal) {
-    modal.style.display = "none";
+    modal.classList.remove("show");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 400);
+    clearForm();
   }
 };
+// Функция для очистки формы
+function clearForm() {
+  setTimeout(() => {
+    document.getElementById("requestForm").reset();
+  }, 1000); // Сброс формы
+}
 
 // Функция для управления тумблерами
 function toggleDesignProject(selected) {
