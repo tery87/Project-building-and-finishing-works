@@ -134,33 +134,40 @@ body {
   grid-row: 2/3;
   grid-column: 8/-1;
   display: grid;
-  padding-left: 20%;
-  grid-template-rows: repeat(auto-fit, 1fr);
+  padding-left: 5.5vw;
+  grid-template-rows: repeat(3, 1fr);
   font-family: AdobeClean;
   justify-items: end;
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 3.4rem;
   color: rgb(255, 253, 253);
-  width: 28rem;
+  width: 30rem;
   gap: 0.8rem;
 }
 .contacts__phone {
-  width: 22.4rem;
-  padding: 0.4rem 2.24rem;
+  width: 23rem;
+  padding: 0.5rem 2.3rem;
   text-align: right;
   background: rgb(255, 253, 253);
   border-radius: 2rem;
+  transition: all 0.2s;
+}
+.contacts__phone:hover {
+  transform: translateY(-0.3rem);
 }
 .contacts__link:link, .contacts__link:visited {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   color: rgb(214, 166, 43);
 }
 .contacts__link_email:link, .contacts__link_email:visited {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   color: rgb(255, 253, 253);
+}
+.contacts__link_email:hover {
+  transform: translateY(-0.3rem);
 }
 
 .boss {
@@ -444,7 +451,7 @@ body {
 
 .logo__small {
   grid-column: 1/2;
-  margin-left: 7vw;
+  margin-left: 6vw;
   align-content: center;
 }
 .logo__small img {
@@ -452,12 +459,19 @@ body {
 }
 
 .contacts-footer {
-  padding-left: 5vw;
+  gap: 1rem;
+  padding-left: 6vw;
   grid-column: 3/-1;
   grid-row: 1/-1;
   display: grid;
   grid-template-rows: 4rem 4rem;
   align-content: center;
+}
+
+.contacts__phone-footer {
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }
 
 .btn {
