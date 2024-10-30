@@ -1,0 +1,130 @@
+$color-white: rgba(255, 253, 253, 1)
+$color-almost-white: rgba(245, 245, 245, 1)
+$color-gold: rgba(214, 166, 43, 1)
+$color-grey: rgba(102, 102, 102, 1)
+
+$box-shadow: 0px .4rem .4rem 0px rgba(0, 0, 0, 0.25)
+
+@mixin respond($breakpoint)
+    @if $breakpoint == mini-phone 
+        @media only screen and (max-width: 400px)
+            @content
+
+    @if $breakpoint == phone 
+        @media only screen and (max-width: 600px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 830px)
+            @content
+    
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1170px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 2000px)
+            @content
+    
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    @include respond(big-screen)
+        font-size: 90%
+    @include respond(tab-land)
+        font-size: 40%
+    @include respond(tab-port)
+        font-size: 35%
+    @include respond(phone)
+        font-size: 20%
+    @include respond(mini-phone)
+        font-size: 18%    
+    scroll-behavior: smooth
+
+@font-face 
+    font-family: "David"
+    src: url('/fonts/david.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-family: "SourceSansPro"
+    src: url('/fonts/SourceSansPro-Regular.ttf')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-family: "AdobeClean"
+    src: url('/fonts/AdobeCleanUXRegular.otf')
+    font-weight: normal
+    font-style: normal
+
+body
+    font-family: SourceSansPro
+    font-weight: 400
+    color: $color-grey
+    line-height: 113%
+    font-size: 1.6rem
+    background-color: $color-white
+/* Общие стили для страницы */
+body 
+    background: linear-gradient(180deg, rgba(204, 204, 204, 0.32) 4.77%, rgba(153, 152, 152, 0.4) 100%), url(../img/services-background.webp) center / cover no-repeat
+    color: $color-grey /* Цвет текста */
+    display: flex
+    justify-content: center /* Центрируем содержимое по горизонтали */
+    align-items: center /* Центрируем содержимое по вертикали */
+    height: 100vh /* Высота страницы */
+
+
+/* Контейнер для сообщения благодарности */
+.thank-you-message 
+    background-color: rgba(255, 255, 255, 0.75)/* Белый фон для блока сообщения */
+    border-radius: 1rem /* Скругленные углы */
+    box-shadow: $box-shadow /* Тень для блока */
+    padding: 5rem /* Отступы внутри блока */
+    text-align: center /* Центрируем текст */
+    max-width: 50% /* Максимальная ширина блока */
+    width: 90% /* Ширина блока */
+
+
+/* Заголовок */
+.thank-you-message h1 
+    font-size: 4.8rem /* Размер шрифта заголовка */
+    line-height: 5.76rem
+    font-weight: 400 /* Жирность шрифта */
+    margin-bottom: 4rem /* Отступ снизу */
+    color: $color-gold /* Цвет заголовка */
+
+
+/* Параграф */
+.thank-you-message p 
+    font-size: 2.4rem /* Размер шрифта для текста */
+    margin-bottom: 3rem /* Отступ снизу */
+
+
+/* Кнопка */
+.thank-you-message button 
+    font-size: 2rem
+    line-height: 2rem
+    font-weight: 400
+    font-family: "SourceSansPro"
+    color: $color-white
+    background-color: $color-gold
+    border: 0
+    padding: 1.4rem 5.6rem
+    border-radius: 2rem
+    box-shadow: $box-shadow
+    cursor: pointer
+    transition: all .2s
+    &:hover
+        color: $color-gold
+        background-color: $color-almost-white
+        transform: scale(.95)
+    &:active
+        transform: translateY(-0.2rem)
+
+

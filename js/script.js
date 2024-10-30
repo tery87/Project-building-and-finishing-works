@@ -35,6 +35,26 @@ function clearForm() {
   }, 1000); // Сброс формы
 }
 
+function showAlert(message) {
+  const alertBox = document.getElementById("customAlert");
+  const alertMessage = document.getElementById("alertMessage");
+
+  alertMessage.textContent = message; // Установить текст сообщения
+  alertBox.style.display = "block"; // Показать alert
+
+  // Закрытие alert при клике на "x"
+  document.getElementById("closeCustomAlert").onclick = function () {
+    alertBox.style.display = "none";
+  };
+
+  // Закрытие alert при клике вне окна
+  window.onclick = function (event) {
+    if (event.target === alertBox) {
+      alertBox.style.display = "none";
+    }
+  };
+}
+
 // Функция для управления тумблерами
 function toggleDesignProject(selected) {
   const buttons = document.querySelectorAll(".toggle-button");
@@ -77,9 +97,25 @@ document
     const condition = document.getElementById("condition").value;
     const designProject = document.querySelector(
       'input[name="designProject"]:checked'
-    ).value;
+    );
     let phone = document.getElementById("phone").value; // Заменяем const на let для изменения переменной
 
+    // Проверка на наличие введенной площади
+    if (!area) {
+      showAlert("Пожалуйста, укажите площадь помещения."); // Показываем кастомный alert
+      return; // Прекращаем дальнейшие действия
+    }
+
+    // Проверка на наличие выбранного состояния объекта
+    if (!condition) {
+      showAlert("Пожалуйста, выберите состояние помещения."); // Показываем кастомный alert
+      return; // Прекращаем дальнейшие действия
+    }
+    // Проверка, выбрано ли значение для "Есть ли дизайн проект?"
+    if (!designProject) {
+      showAlert("Пожалуйста, выберите значение для 'Есть ли дизайн проект?'");
+      return;
+    }
     // Убираем все лишние символы (оставляем только цифры)
     phone = phone.replace(/\D/g, "");
 
@@ -89,7 +125,7 @@ document
       const message = `
       Площадь помещения: ${area} м²
       Состояние помещения: ${condition}
-      Есть ли дизайн проект: ${designProject}
+      Есть ли дизайн проект: ${designProject.value}
       Номер телефона: ${phone}
     `;
 
@@ -99,7 +135,7 @@ document
       // Очистка формы
       this.reset();
     } else {
-      alert("Введите корректный номер телефона.");
+      showAlert("Введите корректный номер телефона.");
     }
   });
 
@@ -121,13 +157,13 @@ function sendToTelegram(message) {
     .then((response) => response.json())
     .then((data) => {
       if (data.ok) {
-        alert("Форма успешно отправлена!");
+        window.location.href = "thankyou.html";
       } else {
-        alert("Произошла ошибка при отправке формы.");
+        showAlert("Произошла ошибка при отправке формы.");
       }
     })
     .catch((error) => {
       console.error("Ошибка:", error);
-      alert("Произошла ошибка при отправке формы.");
+      showAlert("Произошла ошибка при отправке формы.");
     });
 }
