@@ -5,23 +5,36 @@
     grid-template-rows: 7% 93%
     background: linear-gradient(180deg, rgba(204, 204, 204, 0.1) 0%, rgba(102, 102, 102, 0.1) 49.01%, rgba(204, 204, 204, 0.08) 100%)
     padding: 7vw
+    @include respond(phone)
+        grid-template-rows: 25vw 1fr
+        padding: 13vw 5vw
     &__div
         display: grid
         background-color: rgba(102, 102, 102, 0.7)
         box-shadow: $box-shadow
         border-radius: 1rem
         padding: 2.5rem 2.5rem
+        @include respond(phone)
+            padding: 15vw 5vw
     &__list
         display: grid   
         list-style: none
         counter-reset: list-counter 0
         grid-template-rows: repeat(6, minmax(10rem,1fr))
+        @include respond(phone)
+            grid-template-rows: auto 1fr
+            gap: 6vw
     &__list li
         position: relative
         counter-increment: list-counter
         display: flex
         align-items: center
         margin-top: 1.5rem
+        @include respond(phone)
+            // display: grid
+            // grid-template-rows: auto 1fr
+            // grid-template-columns: 100%
+            margin-top: 0
         &::before
             position: absolute
             top: 50%
@@ -37,8 +50,14 @@
             -webkit-text-fill-color: transparent
             text-fill-color: transparent
             transform: translateY(-55%)
+            @include respond(phone)
+                font-size: 12vw
+                line-height: 13.2vw
+                left: 2vw
         & p 
             margin-left: 13rem
+            @include respond(phone)
+                margin-left: 20vw
         &::after 
             content: ""
             position: absolute
@@ -48,6 +67,8 @@
             width: 83%
             background-color: rgba(255, 253, 253, 0.8)
             transform: translateX(10%)
+            @include respond(phone)
+                display: none
         &:last-child::after
             display: none
 

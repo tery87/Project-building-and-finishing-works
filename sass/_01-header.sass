@@ -8,26 +8,49 @@
     background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background.webp) center / cover no-repeat
     background-position: right center
     overflow: hidden
+    @include respond(big-screen)
+        background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_big.webp) center / cover no-repeat
+    @include respond(phone)
+        grid-template-rows: 10% 20% 25% 35% 10%
+        grid-template-columns: 100%
+        padding: 0
+        background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_small.webp) center / cover no-repeat
     &__btn
         grid-row: 4 / -1
-        grid-column: 1 / 18
+        grid-column: 1 / -1
         margin-top: 0.5rem 
         width: 31rem
         height: 4.7rem
+        @include respond(phone)
+            margin-top: 12vw
+            margin-left: 4vw
+            grid-row: 4 / 5
+            width: 46vw
+            height: 10vw
 .logo
     &__big
-        padding-top: 45%
+        padding-top: 25%
         grid-row: 1 / 2
-        grid-column: 1 / 2
+        grid-column: 1 / 3
         display: block
         width: 100%
+        @include respond(phone)
+            padding: 2vw 0 0 2vw 
     &__img
-        width: 200%
-        
-.title
+        width: 100%
+        @include respond(phone)
+            width: 41.5vw
+.title    
     grid-row: 3 / 4
     grid-column: 1 / 7
     margin-top: 1rem
+    @include respond(phone)
+        margin-top: 10vw
+        padding-left: 5.5vw
+        padding-right: 8vw
+        grid-row: 3 / 4
+        grid-column: 1 / -1
+        
 
 .nav
     padding-top: 6.3rem
@@ -51,6 +74,8 @@
         &:hover, &:active
             color: $color-gold
             transform: translateY(-.3rem) 
+    @include respond(phone)
+        display: none
 
 .contacts
     grid-row: 2 / 3
@@ -66,6 +91,16 @@
     color: $color-white
     width: 30rem
     gap: .8rem
+    @include respond(phone)
+        grid-row: 2 / 3
+        grid-column: 1 / -1
+        align-items: center
+        padding: 0 7.8vw 0vw 0
+        width: 100%
+        grid-template-rows: 50% 25% 25%
+        gap: 0.5rem
+        font-size: 5.5vw
+        line-height: 5.92vw
     &__phone
         width: 23rem
         padding: .5rem 2.3rem
@@ -75,18 +110,36 @@
         transition: all .2s
         &:hover
             transform: translateY(-.3rem)
+        @include respond(phone)
+            padding: 1vw
+            width: 41.5vw
+            height: 10vw
+            border-radius: 6vw
+            text-align: center
+            align-content: center
+            
     &__link
         &:link, &:visited
             display: block
             text-decoration: none
             color: $color-gold
+            @include respond(phone)
+                text-align: center
+
     &__link_email
         &:link, &:visited
             display: block
+            padding-top: 1.5rem
             text-decoration: none
             color: $color-white
+            @include respond(phone)
+                font-size: 5.2vw
         &:hover
             transform: translateY(-.3rem)
+    &__working-time
+        @include respond(phone)
+            padding-bottom: 7vw
+            font-size: 5.2vw
 
 .boss
     grid-row: 4/-1
@@ -98,11 +151,24 @@
     padding-top: 8%
     padding-left: 30%
     text-align: center
+    @include respond(phone)
+        margin-top: -1vw
+        padding: 0 4vw  
+        grid-row: 5 / -1
+        grid-column: 1 / -1
+        padding: auto
+        text-align: end
     &__name
         color: $color-gold
         text-shadow: 0px .1rem .1rem $color-white
+        @include respond(phone)
+            font-size: 5.2vw
+            line-height: 7.76vw
+            text-shadow: 0px .2rem .2rem $color-white
     &__job-title
         font-size: 3.2rem
         font-weight: 400
         line-height: 3.84rem
         color: $color-white
+        @include respond(phone)
+            font-size: 5.2vw

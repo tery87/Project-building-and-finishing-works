@@ -5,26 +5,55 @@
     color: $color-white
     font-weight: 600
     text-shadow: 0px .4rem .4rem rgba(0, 0, 0, 0.25)
+    @include respond(phone)
+        font-size: 7.27vw
+        line-height: 8.8vw
+        font-weight: 600
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
 
 .title-advantages
     font-size: 2.4rem
     line-height: 3.12rem
     font-weight: 700
     color: $color-grey
-
-.card-title
-    font-size: 2.4rem
-    line-height: 3.12rem
-    font-weight: 700
-    color: $color-gold
+    @include respond(phone)
+        display: block
+        margin-left: -10vw
+        grid-row: 1 / 2
+        grid-column: 2 / -1
+        font-size: 5.2vw
+        line-height: 5.76vw
 
 .card-paragraph
     font-size: 1.8rem
     line-height: 2.34rem
     font-weight: 400
     color: $color-grey
+    @include respond(phone)
+        display: block
+        margin-top: -5vw
+        grid-row: 2 / -1
+        grid-column: 1 / -1
+        font-size: 5.2vw
+        line-height: 5.76vw
     &_white
         color: $color-white
+        @include respond(phone)
+            grid-row: 1 / 2
+            grid-column: 1 / -1
+            font-size: 5.72vw
+            line-height: 6.4vw
+    
+
+.card-title
+    font-size: 2.4rem
+    line-height: 3.12rem
+    font-weight: 700
+    color: $color-gold
+    @include respond(phone)
+        font-size: 5.72vw
+        line-height: 6.4vw
 
 .title-section
     font-size: 3.2rem
@@ -33,32 +62,51 @@
     color: $color-white
     letter-spacing: 0.1em
     text-align: left
+    @include respond(phone)
+        padding-left: 5vw
+        font-size: 6.24vw
+        line-height: 7.76vw
     &_grey
         color: $color-grey
+        @include respond(phone)
+            padding-left: 5vw
+
 
 .card-services-paragraph
     font-size: 2.4rem
     line-height: 3.12rem
     font-weight: 400
     color: $color-grey
+    @include respond(phone)
+        font-size: 5.2vw
+        line-height: 6.2vw
 
 .work-progress-paragraph
     font-size: 2.4rem
     line-height: 3.12rem
     font-weight: 400
     color: $color-white
+    @include respond(phone)
+        font-size: 5.72vw
+        line-height: 6.4vw
 
 .card-reviews-title
     line-height: 2.6rem
     font-size: 2rem
     font-weight: 400
     color: $color-gold
+    @include respond(phone)
+        font-size: 5.2vw
+        line-height: 6.2vw
 
 .card-reviews-paragraph
     line-height: 2.6rem
     font-size: 2rem
     font-weight: 400
     color: $color-grey
+    @include respond(phone)
+        font-size: 5.2vw
+        line-height: 6.2vw
 
 .placeholder-text
     font-family: Source Sans Pro
@@ -66,8 +114,14 @@
     font-weight: 400
     line-height: 2.54rem
     color: rgba(43, 45, 51, 0.5)
+    @include respond(phone)
+        font-size: 5.2vw
+        line-height: 6.2vw
 .modal-label-text
     color: $color-white
     font-size: 2rem
     line-height: 2.54rem
     font-weight: 400
+    @include respond(phone)
+        font-size: 5.2vw
+        line-height: 6.2vw

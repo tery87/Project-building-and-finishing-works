@@ -5,6 +5,13 @@
     background-color: $color-white
     grid-column: center-start / center-end
     padding: 7.5% 2% 8% 2%
+    @include respond(phone)
+        grid-column: full-start / full-end
+        grid-template-rows: repeat(3, 55vw)
+        grid-template-columns: 100%
+        padding: 13vw 5vw
+        justify-content: center
+        gap: 8vw
 
 
 .advantages-card
@@ -31,3 +38,19 @@
             border-radius: 50%
         &_icon
             width: 68% 
+    @include respond(phone)
+        padding: 4rem
+        grid-template-columns: 20% 80%
+        grid-template-rows: 1fr 3fr
+        gap: 2rem
+        align-items: center
+        &:hover
+            transform: none
+        &__icon-div
+            display: block
+            grid-row: 1 / 2
+            grid-column: 1 / 2
+            justify-content: start
+            &_container
+                width: 12vw
+                height: 12vw

@@ -25,6 +25,9 @@
     transform: scale(0.5) /* Начальный размер */
     opacity: 0 /* Начальная прозрачность */
     transition: transform 0.5s ease, opacity 1s ease
+    @include respond(phone)
+        width: 87vw
+        height: 160vw
 
 .modal.show .modal-content 
   transform: scale(1)
@@ -36,6 +39,11 @@
     grid-template-rows: repeat(5, 1fr)
     grid-template-columns: 1fr 1fr
     gap: 2%
+    @include respond(phone)
+        grid-template-rows: 18vw 18vw 40vw 40vw 15vw
+        grid-template-columns: 100% 
+        align-items: center
+        justify-items: center
 
 
 .close 
@@ -47,23 +55,32 @@
     font-size: 5rem
     font-weight: bold
     cursor: pointer
-    transition: transform 0.3s ease, color 0.3s ease
+    transition: transform 0.3s ease
+    @include respond(phone)
+        top: 5vw
+        font-size: 10vw
     &:hover, &:focus
         transform: rotate(90deg) scale(1.2)
     &:active
-        transform: scale(0.8)
+        transform: scale(0.9)
 
 ////Левая часть
 
 .square-form
     grid-row: 1/2
     grid-column: 1/2
-    color: red
+    color: $color-almost-white
+    @include respond(phone)
+        grid-row: 1/2
+        grid-column: 1/-1
 
 .type-of-object-form
     grid-row: 2/3
     grid-column: 1/2
     appearance: none
+    @include respond(phone)
+        grid-row: 2/3
+        grid-column: 1/-1
     &:focus-visible
         outline: none
         box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2)
@@ -76,6 +93,9 @@
     padding-left: 2rem
     border-radius: 1rem
     -moz-appearance: textfield
+    @include respond(phone)
+        width: 70vw
+        height: 15vw
     &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
         -webkit-appearance: none
         margin: 0
@@ -93,6 +113,13 @@
     grid-column: 1 / 2
     display: grid
     grid-template-rows: 20% 80%
+    @include respond(phone)
+        grid-template-rows: auto auto
+        grid-row: 3 / 4
+        grid-column: 1/-1
+        margin-left: -10vw
+        margin-top: -2vw
+        gap: 2vw
     & label
         grid-row: 1 / 2
         margin-top: 0.5rem
@@ -100,16 +127,21 @@
         font-weight: 400
         line-height: 3.12rem
         color: $color-white
+        @include respond(phone)
+            font-size: 5.72vw
+            line-height: 6.4vw
 
 .toggle-buttons 
     grid-row: 2 / -1
     display: grid
     align-items: center
-    grid-template-rows: repeat(3, 1fr)
-    grid-template-columns: 1fr  1fr
-    gap: 50% 20%
+    grid-template-rows: repeat(3, auto) 
+    grid-template-columns: 1fr 1fr
+    gap: 3vw 2vw
     width: 14%
     height: 10%
+    @include respond(phone)
+        width: 35vw
 
 .toggle-button 
     width: 6.5rem
@@ -117,10 +149,17 @@
     padding: 0.3rem
     background-color: $color-white
     border-radius: 2rem
+    @include respond(phone)
+        padding: 0.8vw
+        width: 17.1vw
+        height: 8.8vw
+        border-radius: 5vw
     & input[type="radio"] 
         display: none 
         &:checked + .slider::before 
             transform: translateX(3.1rem)
+            @include respond(phone)
+                transform: translateX(8.5vw)
 .button-1
     grid-row: 1 / 2
 .button-2
@@ -133,6 +172,8 @@
     height: 2rem /* Высота слайдера */    
     cursor: pointer
     transition: background-color 0.2s /* Плавный переход цвета */
+    @include respond(phone)
+        height: 5vw
     &::before 
         content: "" /* Пустое содержимое для создания слайдера */
         position: absolute
@@ -141,6 +182,10 @@
         background-color: $color-gold /* Цвет переключателя */
         border-radius: 50% /* Скругление переключателя */
         transition: transform 0.2s /* Плавный переход при переключении */
+        @include respond(phone)
+            width: 7.27vw
+            height: 7.27vw
+
 
 ////Правая часть 
 .phone-label
@@ -152,12 +197,24 @@
     font-weight: 400
     line-height: 3.12rem
     color: $color-white
+    @include respond(phone)
+        margin: -3vw 0 10vw 2vw
+        grid-row: 4 / 5
+        grid-column: 1 / -1
+        font-size: 5.2vw
+        line-height: 6.2vw
+        padding: 0vw 3vw 0 3vw
     &__input
-        grid-row: 3/5
-        grid-column: 2/-1
         height: 40.5%
         margin-top: 2.8rem
         margin-left: 3rem
+        @include respond(phone)
+            margin-top: 20vw
+            margin-left: 0
+            height: 10vw
+            grid-row: 4 / 5
+            grid-column: 1 / -1
+            border-radius: 3vw
 .submit_btn
     grid-row: 5 / -1
     grid-column: 2 / 3
@@ -171,6 +228,11 @@
     // border: none
     // border-radius: 4px
     cursor: pointer
+    @include respond(phone)
+        grid-row: 5 / -1
+        grid-column: 1/-1
+        margin: 0 0 6vw 0
+        padding: 0
     &:active
         transform: translateY(-0.2rem)
 
@@ -197,6 +259,16 @@
   border-radius: 1rem
   box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.3)
   text-align: center
+  @include respond(phone)
+    margin: 70vw auto
+    width: 60vw
+    height: 30vw
+    max-width: 70vw
+    align-items: center
+    & p
+        margin-top: 6vw
+        font-size: 5vw
+        line-height: 6vw
 
 
 /* Стиль для кнопки закрытия */
@@ -208,6 +280,11 @@
   font-weight: bold
   color: #333
   cursor: pointer
+  @include respond(phone)
+    top: 3vw
+    right: 3vw  
+    font-size: 5vw
+    font-weight: bold
 
 
 .close-custom-alert:hover 

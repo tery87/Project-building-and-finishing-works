@@ -167,3 +167,34 @@ function sendToTelegram(message) {
       showAlert("Произошла ошибка при отправке формы.");
     });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  let swiper;
+
+  function initSwiper() {
+    if (window.innerWidth <= 700) {
+      if (!swiper) {
+        swiper = new Swiper(".reviews__swiper", {
+          slidesPerView: 1.15,
+          centeredSlides: false,
+          spaceBetween: window.innerWidth * 0.07,
+          loop: true, // Можно поменять на false, если не нужно зацикливание
+          loopFillGroupWithBlank: true,
+          // pagination: {
+          //   el: ".swiper-pagination",
+          //   clickable: true,
+          // },
+          navigation: false, // Убираем кнопки навигации
+        });
+      }
+    } else {
+      if (swiper) {
+        swiper.destroy(); // Уничтожаем слайдер, если ширина больше 700
+        swiper = null; // Сбрасываем swiper
+      }
+    }
+  }
+
+  initSwiper(); // Инициализируем слайдер при загрузке
+
+  window.addEventListener("resize", initSwiper); // Перезапускаем при изменении размера окна
+});

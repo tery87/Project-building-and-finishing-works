@@ -34,7 +34,7 @@ $box-shadow: 0px .4rem .4rem 0px rgba(0, 0, 0, 0.25)
 html
     font-size: 62.5%
     @include respond(big-screen)
-        font-size: 90%
+        font-size: 75%
     @include respond(tab-land)
         font-size: 40%
     @include respond(tab-port)
@@ -89,6 +89,11 @@ body
     text-align: center /* Центрируем текст */
     max-width: 50% /* Максимальная ширина блока */
     width: 90% /* Ширина блока */
+    @include respond(phone)
+        max-width: 90%
+        border-radius: 3vw
+        width: 90vw
+        height: 60vw
 
 
 /* Заголовок */
@@ -98,12 +103,19 @@ body
     font-weight: 400 /* Жирность шрифта */
     margin-bottom: 4rem /* Отступ снизу */
     color: $color-gold /* Цвет заголовка */
+    @include respond(phone)
+        font-size: 7.76vw
+        line-height: 9.76vw
 
 
 /* Параграф */
 .thank-you-message p 
     font-size: 2.4rem /* Размер шрифта для текста */
     margin-bottom: 3rem /* Отступ снизу */
+    @include respond(phone)
+        font-size: 5.76vw
+        line-height: 6.76vw
+        margin-bottom: 5vw
 
 
 /* Кнопка */
@@ -120,6 +132,11 @@ body
     box-shadow: $box-shadow
     cursor: pointer
     transition: all .2s
+    @include respond(phone)
+        width: 50vw
+        font-size: 5.76vw
+        line-height: 6.76vw
+        border-radius: 5vw
     &:hover
         color: $color-gold
         background-color: $color-almost-white

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
 
     <title>NEW.строй</title>
@@ -182,7 +184,7 @@
               >newstroy74@yandex.ru</a
             >
           </div>
-          <div class="contacts__working_time">пн-пт: 10-19 ч</div>
+          <div class="contacts__working-time">пн-пт: 10-19 ч</div>
         </div>
         <div class="boss">
           <p class="boss__name">Станислав Неустроев</p>
@@ -409,6 +411,60 @@
             </p>
           </div>
         </div>
+
+        <!-- Слайдер для мобильных устройств -->
+        <div class="swiper reviews__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="reviews-card">
+                <img
+                  src="img/review_aleksandra.webp"
+                  alt="review_aleksandra"
+                  class="reviews-card__img"
+                />
+                <h3 class="reviews-card__title card-reviews-title">
+                  Александра С.
+                </h3>
+                <p class="reviews-card__paragraph card-reviews-paragraph">
+                  Огромная благодарность команде NEW.Строй и особенно
+                  руководителю Станиславу Неустроеву. Понятно объясняли все
+                  нюансы в ходе ремонта. Помогли с подбором материалов.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews-card">
+                <img
+                  src="img/review_ivan.webp"
+                  alt="review_ivan"
+                  class="reviews-card__img"
+                />
+                <h3 class="reviews-card__title card-reviews-title">Иван К.</h3>
+                <p class="reviews-card__paragraph card-reviews-paragraph">
+                  Отличная организация. Ремонт прошел безболезненно, можно
+                  сказать легко. Мы только контролировали процесс и принимали
+                  результат.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews-card">
+                <img
+                  src="img/review_maria.webp"
+                  alt="review_maria"
+                  class="reviews-card__img"
+                />
+                <h3 class="reviews-card__title card-reviews-title">Мария Я.</h3>
+                <p class="reviews-card__paragraph card-reviews-paragraph">
+                  Понравилось, что руководитель Стас всегда на связи и в курсе
+                  текущей ситуации на нашем объекте. С закупкой материалов
+                  помогли. Ремонт в поставленные сроки закончили.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="reviews__view-more">
           <p
             class="reviews__view-more-paragraph card-paragraph card-paragraph_white"
@@ -488,5 +544,7 @@
       </footer>
     </div>
     <script src="js/script.js "></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
   </body>
 </html>
