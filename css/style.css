@@ -32,19 +32,19 @@ html {
 
 @font-face {
   font-family: "David";
-  src: url("fonts/david.ttf") format("truetype");
+  src: url("../fonts/david.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "SourceSansPro";
-  src: url("fonts/SourceSansPro-Regular.ttf");
+  src: url("../fonts/SourceSansPro-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "AdobeClean";
-  src: url("fonts/AdobeCleanUXRegular.otf");
+  src: url("../fonts/AdobeCleanUXRegular.otf");
   font-weight: normal;
   font-style: normal;
 }
