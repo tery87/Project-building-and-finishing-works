@@ -5,16 +5,16 @@
     display: grid
     grid-template-columns: repeat(10, 1fr)
     grid-template-rows: 22% 15% 35% 28%
-    background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background.webp) center / cover no-repeat
+    background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 28.2%, rgba(0, 0, 0, 0.4) 34.49%, rgba(0, 0, 0, 0.32) 44.65%, rgba(102, 102, 102, 0.4) 53.25%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background.webp) center / cover no-repeat
     background-position: right center
     overflow: hidden
     @include respond(big-screen)
-        background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_big.webp) center / cover no-repeat
+        background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 28.2%, rgba(0, 0, 0, 0.4) 34.49%, rgba(0, 0, 0, 0.32) 44.65%, rgba(102, 102, 102, 0.4) 53.25%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_big.webp) center / cover no-repeat
     @include respond(phone)
         grid-template-rows: 10% 20% 25% 35% 10%
         grid-template-columns: 100%
         padding: 0
-        background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_small.webp) center / cover no-repeat
+        background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 28.2%, rgba(0, 0, 0, 0.4) 34.49%, rgba(0, 0, 0, 0.32) 44.65%, rgba(102, 102, 102, 0.4) 53.25%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_small.webp) center / cover no-repeat
     &__btn
         grid-row: 4 / -1
         grid-column: 1 / -1
@@ -102,7 +102,7 @@
         font-size: 5.5vw
         line-height: 5.92vw
     &__phone
-        width: 23rem
+        width: auto
         padding: .5rem 2.3rem
         text-align: right
         background: $color-white
@@ -111,20 +111,19 @@
         &:hover
             transform: translateY(-.3rem)
         @include respond(phone)
-            padding: 1vw
-            width: 41.5vw
-            height: 10vw
+            padding: 2vw 4vw
+            width: auto
+            height: auto
             border-radius: 6vw
             text-align: center
             align-content: center
             
     &__link
-        &:link, &:visited
-            display: block
-            text-decoration: none
-            color: $color-gold
-            @include respond(phone)
-                text-align: center
+        display: block
+        text-decoration: none
+        color: $color-gold
+        @include respond(phone)
+            text-align: center
 
     &__link_email
         &:link, &:visited

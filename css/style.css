@@ -75,13 +75,13 @@ body {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 22% 15% 35% 28%;
-  background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background.webp) center/cover no-repeat;
+  background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 28.2%, rgba(0, 0, 0, 0.4) 34.49%, rgba(0, 0, 0, 0.32) 44.65%, rgba(102, 102, 102, 0.4) 53.25%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background.webp) center/cover no-repeat;
   background-position: right center;
   overflow: hidden;
 }
 @media only screen and (min-width: 2000px) {
   .header {
-    background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_big.webp) center/cover no-repeat;
+    background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 28.2%, rgba(0, 0, 0, 0.4) 34.49%, rgba(0, 0, 0, 0.32) 44.65%, rgba(102, 102, 102, 0.4) 53.25%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_big.webp) center/cover no-repeat;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -89,7 +89,7 @@ body {
     grid-template-rows: 10% 20% 25% 35% 10%;
     grid-template-columns: 100%;
     padding: 0;
-    background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 18.37%, rgba(102, 102, 102, 0.4) 34.49%, rgba(102, 102, 102, 0.4) 47.93%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_small.webp) center/cover no-repeat;
+    background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 28.2%, rgba(0, 0, 0, 0.4) 34.49%, rgba(0, 0, 0, 0.32) 44.65%, rgba(102, 102, 102, 0.4) 53.25%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_small.webp) center/cover no-repeat;
   }
 }
 .header__btn {
@@ -205,7 +205,7 @@ body {
   }
 }
 .contacts__phone {
-  width: 23rem;
+  width: auto;
   padding: 0.5rem 2.3rem;
   text-align: right;
   background: rgb(255, 253, 253);
@@ -217,21 +217,21 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .contacts__phone {
-    padding: 1vw;
-    width: 41.5vw;
-    height: 10vw;
+    padding: 2vw 4vw;
+    width: auto;
+    height: auto;
     border-radius: 6vw;
     text-align: center;
     align-content: center;
   }
 }
-.contacts__link:link, .contacts__link:visited {
+.contacts__link {
   display: block;
   text-decoration: none;
   color: rgb(214, 166, 43);
 }
 @media only screen and (max-width: 700px) {
-  .contacts__link:link, .contacts__link:visited {
+  .contacts__link {
     text-align: center;
   }
 }
@@ -690,10 +690,8 @@ body {
   grid-row: 1/2;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 @media only screen and (max-width: 700px) {
   .reviews-card__img {
@@ -967,9 +965,7 @@ body {
 .type-of-object-form {
   grid-row: 2/3;
   grid-column: 1/2;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 @media only screen and (max-width: 700px) {
   .type-of-object-form {
@@ -1001,12 +997,6 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
-.form-input::-moz-placeholder {
-  text-align: left;
-  opacity: 1;
-  -moz-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
 .form-input::placeholder {
   text-align: left;
   opacity: 1;
@@ -1014,9 +1004,6 @@ body {
 }
 .form-input:focus-visible {
   outline: none;
-}
-.form-input:focus-visible::-moz-placeholder {
-  opacity: 0;
 }
 .form-input:focus-visible::placeholder {
   opacity: 0;
@@ -1059,12 +1046,13 @@ body {
   align-items: center;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: 1fr 1fr;
-  gap: 3vw 2vw;
+  gap: 1.2rem;
   width: 14%;
   height: 10%;
 }
 @media only screen and (max-width: 700px) {
   .toggle-buttons {
+    gap: 3vw 2vw;
     width: 35vw;
   }
 }
@@ -1159,6 +1147,8 @@ body {
   height: 40.5%;
   margin-top: 2.8rem;
   margin-left: 3rem;
+  grid-row: 3/5;
+  grid-column: 2/-1;
 }
 @media only screen and (max-width: 700px) {
   .phone-label__input {
@@ -1270,7 +1260,7 @@ body {
     font-size: 7.27vw;
     line-height: 8.8vw;
     font-weight: 600;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -1433,4 +1423,4 @@ body {
     font-size: 5.2vw;
     line-height: 6.2vw;
   }
-}/*# sourceMappingURL=style.css.map */
+}
