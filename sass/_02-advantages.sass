@@ -3,8 +3,8 @@
     grid-template-columns: repeat(3, 1fr)
     gap: 1.8%
     background-color: $color-white
-    grid-column: full-start / full-end
-    padding: 8%
+    grid-column: 2 / 14
+    padding: 6% 6% 7.2% 6%
     @include respond(phone)
         grid-column: full-start / full-end
         grid-template-rows: repeat(3, 55vw)
@@ -18,10 +18,10 @@
     background-color: $color-almost-white
     display: grid
     text-align: center
-    padding: 5rem 2.7rem 5rem 2.7rem
+    padding: 1rem 2.7rem 5rem 2.7rem
     box-shadow: 0px .4rem .4rem 0px rgba(102, 102, 102, 0.3)
     transition: .2s all
-    grid-template-rows: 55% 20% 25%
+    grid-template-rows: 55% 20% auto
     &:hover
         transform: translateY(-1.5rem) scale(1.03)
     &__icon-div
