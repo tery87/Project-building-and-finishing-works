@@ -169,16 +169,18 @@ function sendToTelegram(message) {
 }
 document.addEventListener("DOMContentLoaded", function () {
   let swiper;
-
+  
   function initSwiper() {
+    console.log("Current width:", window.innerWidth);
     if (window.innerWidth <= 700) {
+      document.querySelector('.reviews__swiper').style.display = 'flex';
       if (!swiper) {
         swiper = new Swiper(".reviews__swiper", {
           slidesPerView: 1.15,
           centeredSlides: false,
           spaceBetween: window.innerWidth * 0.07,
           loop: true, // Можно поменять на false, если не нужно зацикливание
-          loopFillGroupWithBlank: true,
+          // loopFillGroupWithBlank: true,
           // pagination: {
           //   el: ".swiper-pagination",
           //   clickable: true,
@@ -188,8 +190,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } else {
       if (swiper) {
-        swiper.destroy(); // Уничтожаем слайдер, если ширина больше 700
+        console.log("Destroying Swiper");
+        swiper.destroy(true, true); // Уничтожаем слайдер, если ширина больше 700
         swiper = null; // Сбрасываем swiper
+        document.querySelector('.reviews__swiper').style.display = 'none';
       }
     }
   }

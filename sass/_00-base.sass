@@ -23,7 +23,7 @@ $box-shadow: 0px .4rem .4rem 0px rgba(0, 0, 0, 0.25)
             @content
 
     @if $breakpoint == big-screen
-        @media only screen and (min-width: 2000px)
+        @media only screen and (min-width: 1900px)
             @content
     
 *, ::after, ::before
@@ -34,7 +34,7 @@ $box-shadow: 0px .4rem .4rem 0px rgba(0, 0, 0, 0.25)
 html
     font-size: 62.5%
     @include respond(big-screen)
-        font-size: 85%
+        font-size: 95%
     @include respond(tab-land)
         font-size: 52%
     @include respond(tab-port)
@@ -73,7 +73,7 @@ body
 
 .container
     display: grid
-    grid-template-rows: 51.4vw 41.25vw 103.5vw 90.3vw 65.84vw 11.88vw
+    grid-template-rows: 51.4vw auto auto auto auto 11.88vw
     grid-template-columns: [full-start] minmax(14rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(7rem, 1fr) [full-end]
     @include respond(phone)
         grid-template-rows: 186.7vw 206vw auto auto 213.76vw 100vw

@@ -9,9 +9,9 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 1900px) {
   html {
-    font-size: 85%;
+    font-size: 95%;
   }
 }
 @media only screen and (max-width: 1280px) {
@@ -59,7 +59,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 51.4vw 41.25vw 103.5vw 90.3vw 65.84vw 11.88vw;
+  grid-template-rows: 51.4vw auto auto auto auto 11.88vw;
   grid-template-columns: [full-start] minmax(14rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(7rem, 1fr) [full-end];
 }
 @media only screen and (max-width: 700px) {
@@ -79,7 +79,7 @@ body {
   background-position: right center;
   overflow: hidden;
 }
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 1900px) {
   .header {
     background: linear-gradient(105.82deg, rgba(0, 0, 0, 0.4) 28.2%, rgba(0, 0, 0, 0.4) 34.49%, rgba(0, 0, 0, 0.32) 44.65%, rgba(102, 102, 102, 0.4) 53.25%, rgba(102, 102, 102, 0.4) 71.97%, rgba(0, 0, 0, 0.4) 84.65%), url(../img/header-background_big.webp) center/cover no-repeat;
   }
@@ -304,8 +304,8 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.8%;
   background-color: rgb(255, 253, 253);
-  grid-column: center-start/center-end;
-  padding: 7.5% 2% 8% 2%;
+  grid-column: full-start/full-end;
+  padding: 8%;
 }
 @media only screen and (max-width: 700px) {
   .advantages {
@@ -322,7 +322,7 @@ body {
   background-color: rgb(245, 245, 245);
   display: grid;
   text-align: center;
-  padding: 5rem 2.7rem 2.7rem 2.7rem;
+  padding: 5rem 2.7rem 5rem 2.7rem;
   box-shadow: 0px 0.4rem 0.4rem 0px rgba(102, 102, 102, 0.3);
   transition: 0.2s all;
   grid-template-rows: 55% 20% 25%;
@@ -531,6 +531,7 @@ body {
 }
 .work-progress__list li p {
   margin-left: 13rem;
+  padding-right: 5rem;
 }
 @media only screen and (max-width: 700px) {
   .work-progress__list li p {
@@ -543,9 +544,9 @@ body {
   left: 0;
   bottom: -1rem;
   height: 0.3rem;
-  width: 83%;
+  width: 70vw;
   background-color: rgba(255, 253, 253, 0.8);
-  transform: translateX(10%);
+  transform: translateX(11.5%);
 }
 @media only screen and (max-width: 700px) {
   .work-progress__list li::after {
@@ -560,7 +561,7 @@ body {
   grid-column: full-start/full-end;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 7% 62% 31%;
+  grid-template-rows: 10% auto auto;
   background: linear-gradient(180deg, rgba(102, 102, 102, 0.5) 16.27%, rgba(255, 253, 253, 0.5) 44.77%, rgba(102, 102, 102, 0.5) 75.27%), url(../img/reviews-background.webp) center/cover no-repeat;
   padding: 7vw;
 }
@@ -574,9 +575,10 @@ body {
 .reviews__div {
   grid-row: 2/3;
   display: grid;
-  grid-template-columns: repeat(3, minmax(10vw, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
   gap: 4%;
-  padding: 2rem 0 0 2rem;
+  padding: 0;
 }
 @media only screen and (max-width: 700px) {
   .reviews__div {
@@ -585,6 +587,11 @@ body {
 }
 .reviews__swiper {
   display: none;
+}
+@media (min-width: 701px) {
+  .reviews__swiper {
+    display: none;
+  }
 }
 @media only screen and (max-width: 700px) {
   .reviews__swiper {
@@ -601,7 +608,7 @@ body {
   }
 }
 .reviews__view-more {
-  padding-top: 5%;
+  padding-top: 4vw;
   grid-row: 3/4;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -662,13 +669,12 @@ body {
 .reviews-card {
   background-color: rgb(245, 245, 245);
   display: grid;
-  grid-template-rows: 35% 15% 50%;
+  grid-template-rows: 40% auto auto;
   box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.25);
   transition: 0.2s all;
-  border-radius: 1rem 1rem 0rem 0rem;
-  min-height: 44rem;
-  min-width: 28rem;
+  border-radius: 2rem 2rem 0rem 0rem;
   transition: 0.2s all;
+  padding-bottom: 2vw;
 }
 @media only screen and (max-width: 700px) {
   .reviews-card {
@@ -691,6 +697,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 1.9rem 1.9rem 0rem 0rem;
 }
 @media only screen and (max-width: 700px) {
   .reviews-card__img {
@@ -710,15 +717,12 @@ body {
   align-self: stretch;
 }
 
-.swiper-wrapper {
-  display: flex;
-}
-
 .footer {
   background-color: rgb(102, 102, 102);
   grid-column: full-start/full-end;
   display: grid;
   grid-template-columns: 33% 34% 33%;
+  padding: 0 7vw;
 }
 @media only screen and (max-width: 700px) {
   .footer {
@@ -733,9 +737,11 @@ body {
   grid-column: 2/3;
   align-content: center;
   justify-content: center;
+  margin-left: 5vw;
 }
 @media only screen and (max-width: 700px) {
   .footer__icons {
+    margin-left: 0;
     grid-row: 2/3;
     grid-column: 1/-1;
   }
@@ -753,6 +759,7 @@ body {
 
 .telegram-img {
   width: 2vw;
+  padding-top: 0.2rem;
 }
 @media only screen and (max-width: 700px) {
   .telegram-img {
@@ -782,7 +789,6 @@ body {
 
 .logo__small {
   grid-column: 1/2;
-  margin-left: 6vw;
   align-content: center;
 }
 @media only screen and (max-width: 700px) {
@@ -805,13 +811,15 @@ body {
 }
 
 .contacts-footer {
+  margin-left: 8vw;
   gap: 1rem;
-  padding-left: 6vw;
   grid-column: 3/-1;
   grid-row: 1/-1;
   display: grid;
   grid-template-rows: 4rem 4rem;
+  padding: 0;
   align-content: center;
+  justify-content: center;
 }
 @media only screen and (max-width: 700px) {
   .contacts-footer {
@@ -1065,7 +1073,7 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .toggle-button {
-    padding: 0.8vw;
+    padding: 0.75vw;
     width: 17.1vw;
     height: 8.8vw;
     border-radius: 5vw;
@@ -1079,7 +1087,7 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .toggle-button input[type=radio]:checked + .slider::before {
-    transform: translateX(8.5vw);
+    transform: translateX(8.2vw);
   }
 }
 

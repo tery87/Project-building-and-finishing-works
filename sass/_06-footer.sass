@@ -3,6 +3,7 @@
     grid-column: full-start / full-end
     display: grid
     grid-template-columns: 33% 34% 33%
+    padding: 0 7vw
     @include respond(phone)
         grid-template-columns: 100%
         grid-template-rows: 33% 34% 33%
@@ -13,7 +14,9 @@
         grid-column: 2/3
         align-content: center
         justify-content: center
+        margin-left: 5vw
         @include respond(phone)
+            margin-left: 0
             grid-row: 2/3
             grid-column: 1/-1 
 
@@ -26,6 +29,7 @@
 
 .telegram-img
     width: 2vw
+    padding-top: .2rem
     @include respond(phone)
         width: 9vw
         padding-top: 1.7vw
@@ -41,7 +45,6 @@
 
 .logo__small
     grid-column: 1/2
-    margin-left: 6vw
     align-content: center
     @include respond(phone)
         display: grid
@@ -56,13 +59,15 @@
             width: 50vw
 
 .contacts-footer
+    margin-left: 8vw
     gap: 1rem
-    padding-left: 6vw
     grid-column: 3/-1
     grid-row: 1/-1
     display: grid
     grid-template-rows: 4rem 4rem
+    padding: 0
     align-content: center
+    justify-content: center
     @include respond(phone)
         padding: 0
         justify-items: center
