@@ -2,7 +2,6 @@
 const modal = document.getElementById("modal");
 const openFormBtn = document.getElementById("openFormBtn");
 const closeModal = document.getElementById("closeModal");
-
 // Открытие модального окна
 openFormBtn.onclick = function () {
   modal.style.display = "block";
@@ -167,11 +166,12 @@ function sendToTelegram(message) {
       showAlert("Произошла ошибка при отправке формы.");
     });
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   let swiper;
   
   function initSwiper() {
-    console.log("Current width:", window.innerWidth);
+    
     if (window.innerWidth <= 700) {
       document.querySelector('.reviews__swiper').style.display = 'flex';
       if (!swiper) {
@@ -190,7 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } else {
       if (swiper) {
-        console.log("Destroying Swiper");
         swiper.destroy(true, true); // Уничтожаем слайдер, если ширина больше 700
         swiper = null; // Сбрасываем swiper
         document.querySelector('.reviews__swiper').style.display = 'none';

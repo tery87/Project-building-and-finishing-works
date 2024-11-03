@@ -74,6 +74,6 @@ body
 .container
     display: grid
     grid-template-rows: 51.4vw auto auto auto auto 11.88vw
-    grid-template-columns: [full-start] minmax(14rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(7rem, 1fr) [full-end]
+    grid-template-columns: [full-start] 1fr [center-start] repeat(12, 1fr) [center-end] 1fr [full-end]
     @include respond(phone)
         grid-template-rows: 186.7vw 206vw auto auto 213.76vw 100vw

@@ -60,7 +60,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 51.4vw auto auto auto auto 11.88vw;
-  grid-template-columns: [full-start] minmax(14rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(7rem, 1fr) [full-end];
+  grid-template-columns: [full-start] 1fr [center-start] repeat(12, 1fr) [center-end] 1fr [full-end];
 }
 @media only screen and (max-width: 700px) {
   .container {
@@ -587,11 +587,6 @@ body {
 }
 .reviews__swiper {
   display: none;
-}
-@media (min-width: 701px) {
-  .reviews__swiper {
-    display: none;
-  }
 }
 @media only screen and (max-width: 700px) {
   .reviews__swiper {
