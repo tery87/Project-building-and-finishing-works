@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
         swiper = new Swiper(".reviews__swiper", {
           slidesPerView: 1.15,
           centeredSlides: false,
-          spaceBetween: window.innerWidth * 0.07,
+          spaceBetween: window.innerWidth * 0.06,
           loop: true, // Можно поменять на false, если не нужно зацикливание
           // loopFillGroupWithBlank: true,
           // pagination: {

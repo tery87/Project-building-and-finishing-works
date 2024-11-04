@@ -761,7 +761,6 @@ body {
   .telegram-img {
     width: 9vw;
     padding-top: 1.7vw;
-    margin-left: 3vw;
   }
 }
 
@@ -819,10 +818,12 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .contacts-footer {
-    padding: 0;
     justify-items: center;
+    justify-self: center;
+    align-self: center;
     grid-column: 1/-1;
     grid-row: 3/-1;
+    padding: 0;
     gap: 10vw;
     width: 70vw;
   }
@@ -835,8 +836,8 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .contacts__phone-footer {
-    justify-items: center;
-    align-items: center;
+    justify-self: center;
+    align-self: center;
     width: 65vw;
     font-size: 6.24vw;
     line-height: 7.76vw;
