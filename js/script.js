@@ -122,10 +122,11 @@ document
     if (phone.length === 11 && phone.startsWith("7")) {
       // Формирование сообщения для Telegram
       const message = `
+      Дата заявки: ${new Date().toLocaleString()}
       Площадь помещения: ${area} м²
       Состояние помещения: ${condition}
       Есть ли дизайн проект: ${designProject.value}
-      Номер телефона: ${phone}
+      Номер телефона: +${phone}
     `;
 
       // Отправка сообщения в Telegram
