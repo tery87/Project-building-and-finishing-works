@@ -44,6 +44,7 @@
     grid-row: 3 / 4
     grid-column: 1 / 7
     margin-top: 1rem
+    text-shadow: $box-shadow
     @include respond(phone)
         margin-top: 10vw
         padding-left: 5.5vw
@@ -62,6 +63,7 @@
         grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)) 
         justify-items: center
         gap: 0
+        
     &__link
         &:link, &:visited
             font-size: 2rem
@@ -71,6 +73,7 @@
             text-align: center
             transition: all .2s
             display: inline-block
+            
         &:hover, &:active
             color: $color-gold
             transform: translateY(-.3rem) 

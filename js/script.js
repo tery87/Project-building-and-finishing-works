@@ -73,8 +73,8 @@ function toggleDesignProject(selected) {
 
 // Закодированные токен и chat_id
 const encodedBotToken =
-  "NzA1MjYwMDk3NjpBQUYzZUdQWjVKaG5tajg2SmVFTVFQNTRPQy1LcmlyNENiSQ=="; // закодированный botToken
-const encodedChatId = "MjkyMTMyNjY4"; // закодированный chat_id
+  "Nzc2NTUzMDk1OTpBQUY3SVlUczdNLWowTERlNnVfVDI3a3J4blJEb3JIc1pRWQ=="; // закодированный botToken
+const encodedChatId = "NzgxMjk3MjA3Ng=="; // закодированный chat_id
 
 // Функция для декодирования
 function decodeBase64(encoded) {
@@ -170,11 +170,10 @@ function sendToTelegram(message) {
 
 document.addEventListener("DOMContentLoaded", function () {
   let swiper;
-  
+
   function initSwiper() {
-    
     if (window.innerWidth <= 700) {
-      document.querySelector('.reviews__swiper').style.display = 'flex';
+      document.querySelector(".reviews__swiper").style.display = "flex";
       if (!swiper) {
         swiper = new Swiper(".reviews__swiper", {
           slidesPerView: 1.15,
@@ -193,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (swiper) {
         swiper.destroy(true, true); // Уничтожаем слайдер, если ширина больше 700
         swiper = null; // Сбрасываем swiper
-        document.querySelector('.reviews__swiper').style.display = 'none';
+        document.querySelector(".reviews__swiper").style.display = "none";
       }
     }
   }
